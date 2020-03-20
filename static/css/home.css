@@ -1,0 +1,52 @@
+.outfit {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  background-color: #1b1b1e;
+  width: 350px;
+  height: 500px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+#img-out {
+  width: 100%;
+  height: 75%;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  background-color: rgba(196, 196, 196, 0.65);
+}
+
+#img-save {
+  display: flex;
+  background-color: rgba(92, 210, 218, 0.5);
+  height: 5%;
+  font-weight: 550;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#img-save a {
+  text-decoration: none;
+  color: black;
+}
+
+#img-desc {
+  height: 20%;
+  background-color: rgba(196, 196, 196, 0.125);
+  color: #e5e5e5;
+}
+#img-desc h4,
+p {
+  padding: 5px;
+}
+
+#ins {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+body h2 {
+  padding: 10px;
+}

@@ -1,0 +1,38 @@
+{
+  "items": {
+    "tops": [
+      {
+        "t-shirts": [
+          {
+            "blue": "#6495ED",
+            "white": "#F0FFFF",
+            "black": "#000000",
+            "red": "#8B0000"
+          }
+        ]
+      }
+    ],
+    "bottoms": [
+      {
+        "pants": [
+          {
+            "beige": "#FFE4C4",
+            "black": "#000000",
+            "blue": "#1E90FF"
+          }
+        ]
+      }
+    ],
+    "shoes": [
+      {
+        "sneakers": [
+          {
+            "white": "#F0FFFF",
+            "black": "#000000",
+            "brown": "#D2691E"
+          }
+        ]
+      }
+    ]
+  }
+}
