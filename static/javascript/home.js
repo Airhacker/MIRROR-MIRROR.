@@ -21,29 +21,36 @@ function main() {
     // Creates main outfit div
     document.getElementsByClassName("main-body")[0].appendChild(div);
 
-    outfit(i);
+    // Generate Random Colors for all items
+    let tShirtColor = random();
+    let pantsColor = random();
+    let shoesColor = random();
+
+    outfit(i, tShirtColor, pantsColor, shoesColor);
     saveBtn(i);
-    description(i);
-    //Please commit
+    description(i, tShirtColor, pantsColor, shoesColor);
   }
 }
 
 // Resposnible foor displaying svg of clothes
-function outfit(num) {
+function outfit(num, tShirtColor, pantsColor, shoesColor) {
   let image = document.createElement("div");
   image.id = "img-out";
 
   // Create tshirt img
   tShirt = document.createElement("img");
   tShirt.src = "./static/images/shirt.svg";
+  tShirt.style = "background-color:" + data.colors.colorDef[tShirtColor];
 
   // Creates pants img
   pants = document.createElement("img");
   pants.src = "./static/images/pants.svg";
+  pants.style = "background-color:" + data.colors.colorDef[pantsColor];
 
   // Creates shoes img
   shoes = document.createElement("img");
   shoes.src = "./static/images/shoes.svg";
+  shoes.style = "background-color:" + data.colors.colorDef[shoesColor];
 
   image.appendChild(tShirt);
   image.appendChild(pants);
@@ -76,7 +83,7 @@ function saveBtn(num) {
 }
 
 // Responsible for the description portion of the card
-function description(num) {
+function description(num, tShirtColor, pantsColor, shoesColor) {
   // Make div with id of description
   let desc = document.createElement("div");
   desc.id = "img-desc";
@@ -89,7 +96,7 @@ function description(num) {
 
   // Puts paragraph on div
   let para = document.createElement("p");
-  para.innerText = itemDesc();
+  para.innerText = itemDesc(tShirtColor, pantsColor, shoesColor);
 
   desc.appendChild(para);
 
@@ -106,9 +113,9 @@ function random() {
 }
 
 // Fills detail into description paragraph tag
-function itemDesc() {
+function itemDesc(tShirtColor, pantsColor, shoesColor) {
   itemDescription =
-    random() + " shirt," + random() + " pants," + random() + " shoes.";
+    tShirtColor + " shirt," + pantsColor + " pants," + shoesColor + " shoes.";
 
   return itemDescription;
 }
