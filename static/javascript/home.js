@@ -18,19 +18,38 @@ function main() {
     let div = document.createElement("div");
     div.className = "outfit";
 
-    let image = document.createElement("div");
-    image.id = "img-out";
-    outfit();
-
+    // Creates main outfit div
     document.getElementsByClassName("main-body")[0].appendChild(div);
-    document.getElementsByClassName("outfit")[i].appendChild(image);
 
+    outfit(i);
     saveBtn(i);
     description(i);
   }
 }
 
-function outfit() {}
+// Resposnible foor displaying svg of clothes
+function outfit(num) {
+  let image = document.createElement("div");
+  image.id = "img-out";
+
+  // Create tshirt img
+  tShirt = document.createElement("img");
+  tShirt.src = "./static/images/shirt.svg";
+
+  // Creates pants img
+  pants = document.createElement("img");
+  pants.src = "./static/images/pants.svg";
+
+  // Creates shoes img
+  shoes = document.createElement("img");
+  shoes.src = "./static/images/shoes.svg";
+
+  image.appendChild(tShirt);
+  image.appendChild(pants);
+  image.appendChild(shoes);
+
+  document.getElementsByClassName("outfit")[num].appendChild(image);
+}
 
 // Responsible for try on button
 function saveBtn(num) {
