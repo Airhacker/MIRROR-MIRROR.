@@ -39,18 +39,18 @@ function outfit(num, tShirtColor, pantsColor, shoesColor) {
 
   // Create tshirt img
   tShirt = document.createElement("img");
-  tShirt.src = "./static/images/shirt.svg";
-  tShirt.style = "background-color:" + data.colors.colorDef[tShirtColor];
+  tShirt.src = "./static/images/shirt_" + tShirtColor + ".svg";
+  //tShirt.style = "background-color:" + data.colors.colorDef[tShirtColor];
 
   // Creates pants img
   pants = document.createElement("img");
-  pants.src = "./static/images/pants.svg";
-  pants.style = "background-color:" + data.colors.colorDef[pantsColor];
+  pants.src = "./static/images/pants_" + pantsColor + ".svg";
+  //pants.style = "background-color:" + data.colors.colorDef[pantsColor];
 
   // Creates shoes img
   shoes = document.createElement("img");
-  shoes.src = "./static/images/shoes.svg";
-  shoes.style = "background-color:" + data.colors.colorDef[shoesColor];
+  shoes.src = "./static/images/shoes_" + shoesColor + ".svg";
+  //shoes.style = "background-color:" + data.colors.colorDef[shoesColor];
 
   image.appendChild(tShirt);
   image.appendChild(pants);
