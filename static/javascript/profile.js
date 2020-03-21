@@ -77,6 +77,14 @@ function init() {
     character.castShadow = true;
     character.recieveShadow = true;
 
+    myMat = new THREE.MeshStandardMaterial({
+      color: 0xc4c4c4,
+      opacity: 1,
+      wireframe: true
+    });
+
+    character => (character.material = myMat);
+
     scene.add(character);
 
     animate();
@@ -98,6 +106,7 @@ function animate() {
   controls.maxDistance = 30;
   controls.target.set(0, 0.5, 0);
   controls.enablePan = false;
+  controls.enableDamping = true;
 
   var delta = clock.getDelta();
 
