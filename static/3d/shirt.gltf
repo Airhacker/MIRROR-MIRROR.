@@ -15,7 +15,7 @@
     "nodes" : [
         {
             "mesh" : 0,
-            "name" : "character",
+            "name" : "shirt",
             "rotation" : [
                 0.7071068286895752,
                 0,
@@ -27,12 +27,12 @@
     "materials" : [
         {
             "doubleSided" : true,
-            "name" : "Skin",
+            "name" : "shirt",
             "pbrMetallicRoughness" : {
                 "baseColorFactor" : [
-                    0.800000011920929,
-                    0.6244819760322571,
-                    0.4887639880180359,
+                    1,
+                    1,
+                    1,
                     1
                 ],
                 "metallicFactor" : 0,
@@ -42,7 +42,7 @@
     ],
     "meshes" : [
         {
-            "name" : "character_Cube",
+            "name" : "shirt_Cube.002",
             "primitives" : [
                 {
                     "attributes" : {
@@ -60,64 +60,64 @@
         {
             "bufferView" : 0,
             "componentType" : 5126,
-            "count" : 1222,
+            "count" : 162,
             "max" : [
-                3.6064300537109375,
-                1.3078639507293701,
-                8.166090965270996
+                2.576817035675049,
+                1.1049000024795532,
+                -0.40426400303840637
             ],
             "min" : [
-                -3.6064300537109375,
+                -2.576817035675049,
                 -1.1481510400772095,
-                -8.18204402923584
+                -5.443215847015381
             ],
             "type" : "VEC3"
         },
         {
             "bufferView" : 1,
             "componentType" : 5126,
-            "count" : 1222,
+            "count" : 162,
             "type" : "VEC3"
         },
         {
             "bufferView" : 2,
             "componentType" : 5126,
-            "count" : 1222,
+            "count" : 162,
             "type" : "VEC2"
         },
         {
             "bufferView" : 3,
             "componentType" : 5123,
-            "count" : 4164,
+            "count" : 864,
             "type" : "SCALAR"
         }
     ],
     "bufferViews" : [
         {
             "buffer" : 0,
-            "byteLength" : 14664,
+            "byteLength" : 1944,
             "byteOffset" : 0
         },
         {
             "buffer" : 0,
-            "byteLength" : 14664,
-            "byteOffset" : 14664
+            "byteLength" : 1944,
+            "byteOffset" : 1944
         },
         {
             "buffer" : 0,
-            "byteLength" : 9776,
-            "byteOffset" : 29328
+            "byteLength" : 1296,
+            "byteOffset" : 3888
         },
         {
             "buffer" : 0,
-            "byteLength" : 8328,
-            "byteOffset" : 39104
+            "byteLength" : 1728,
+            "byteOffset" : 5184
         }
     ],
     "buffers" : [
         {
-            "byteLength" : 47432,
-            "uri" : "character.bin"
+            "byteLength" : 6912,
+            "uri" : "shirt.bin"
         }
     ]
 }

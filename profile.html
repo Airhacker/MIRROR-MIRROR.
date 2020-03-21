@@ -2,7 +2,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WINDOWSHOPPER.</title>
+    <title>MIRROR-MIRROR.</title>
     <link rel="stylesheet" href="static/css/style.css" />
     <link rel="stylesheet" href="static/css/profile.css" />
   </head>
@@ -37,7 +37,17 @@
           </div>
           <div id="skin-color-selector">
             <button>Skin</button>
-            <button>T-Shirt</button>
+            <div class="shirt-dropdown-div">
+              <button onclick="shirtDropdown()" class="shirt-btn">
+                T-Shirt
+              </button>
+              <div id="shirt-dropdown" class="shirt-dropdown-class">
+                <p>White</p>
+                <p>Black</p>
+                <p>Blue</p>
+                <p>Red</p>
+              </div>
+            </div>
             <button>Pants</button>
             <button>Shoes</button>
           </div>

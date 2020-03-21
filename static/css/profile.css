@@ -30,3 +30,49 @@ canvas {
 #go-back-btn a img {
   width: 50px;
 }
+
+.shirt-btn {
+  background-color: #d2e7ff;
+  color: #1b1b1b;
+  padding: 16px;
+  font-size: 20px;
+  border: none;
+  border-radius: 10%;
+  cursor: pointer;
+}
+
+.shirt-btn:hover,
+.shirt-btn:focus {
+  background-color: #c4c4c4;
+}
+
+.shirt-dropdown-div {
+  position: relative;
+  display: inline;
+}
+
+#shirt-dropdown {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  top: -190px;
+  left: 0px;
+  right: 0px;
+}
+
+#shirt-dropdown p {
+  color: #1b1b1b;
+  padding: 12px 16px;
+  display: block;
+}
+
+#shirt-dropdown p:hover {
+  background-color: #dddddd;
+}
+
+.show {
+  display: block;
+}

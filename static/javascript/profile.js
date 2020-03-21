@@ -67,23 +67,63 @@ function init() {
   renderer.outputEncoding = THREE.sRGBEncoding;
   renderer.shadowMap.enabled = true;
 
-  // Model Loader
-  let loader = new THREE.GLTFLoader();
-  loader.load("./static/3d/character.gltf", function(gltf) {
-    character = gltf.scene.children[0]; //Character properties
+  // t-SHirt Model Loader
+  let shirtLoader = new THREE.GLTFLoader();
+  shirtLoader.load("./static/3d/shirt.gltf", function(gltf) {
+    shirtChar = gltf.scene.children[0]; //Shirt properties
 
-    var s = 1;
-    character.scale.set(s, s, s);
-    character.castShadow = true;
-    character.recieveShadow = true;
-
-    myMat = new THREE.MeshStandardMaterial({
-      color: 0xc4c4c4,
+    shirtMat = new THREE.MeshStandardMaterial({
+      color: 0x6495ed,
       opacity: 1,
-      wireframe: true
+      wireframe: false
     });
 
-    character => (character.material = myMat);
+    shirtChar.material = shirtMat;
+
+    scene.add(shirtChar);
+  });
+  // Pants Model Loader
+  let pantsLoader = new THREE.GLTFLoader();
+  pantsLoader.load("./static/3d/pants.gltf", function(gltf) {
+    pantsChar = gltf.scene.children[0]; //Character properties
+
+    pantsMat = new THREE.MeshStandardMaterial({
+      color: 0x008000,
+      opacity: 1,
+      wireframe: false
+    });
+
+    pantsChar.material = pantsMat;
+
+    scene.add(pantsChar);
+  });
+  // Model Loader
+  let shoesLoader = new THREE.GLTFLoader();
+  shoesLoader.load("./static/3d/shoes.gltf", function(gltf) {
+    shoesChar = gltf.scene.children[0]; //Character properties
+
+    shoesMat = new THREE.MeshStandardMaterial({
+      color: 0xffd700,
+      opacity: 1,
+      wireframe: false
+    });
+
+    shoesChar.material = shoesMat;
+
+    scene.add(shoesChar);
+  });
+  // Model Loader
+  let characterLoader = new THREE.GLTFLoader();
+  characterLoader.load("./static/3d/character.gltf", function(gltf) {
+    character = gltf.scene.children[0]; //Character properties
+
+    skinMat = new THREE.MeshStandardMaterial({
+      color: 0xffa07a,
+      opacity: 1,
+      wireframe: false
+    });
+
+    character.material = skinMat;
 
     scene.add(character);
 
@@ -124,3 +164,33 @@ function onWindowResize() {
 }
 
 window.addEventListener("resize", onWindowResize);
+
+// Buttons on Profile Page
+//shirt menu
+function shirtDropdown() {
+  document.getElementById("shirt-dropdown").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches(".shirt-btn")) {
+    var dropdowns = document.getElementsByClassName("shirt-dropdown-class");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains("show")) {
+        openDropdown.classList.remove("show");
+      }
+    }
+  }
+};
+
+/*
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>
+*/
