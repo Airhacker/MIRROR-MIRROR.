@@ -14,9 +14,9 @@ body {
 
 /* The whole document */
 .container {
-  background-color: #fff6e9;
+  background-color: #051622;
   min-height: 100vh;
-  color: #1b1b1b;
+  color: #deb992;
   font-family: "Teko", sans-serif;
 }
 
@@ -26,14 +26,14 @@ nav {
   justify-content: space-around;
   align-items: center;
   min-height: 8vh;
-  background-color: #d2e7ff;
+  background-color: #1ba098;
 }
 
 .logo {
   display: flex;
   letter-spacing: 5px;
   font-size: 20px;
-  color: #1b1b1e;
+  color: #051622;
   font-family: "Teko", serif;
 }
 
@@ -46,6 +46,7 @@ nav {
   display: flex;
   justify-content: space-around;
   width: 30%;
+  z-index: 2;
 }
 
 .nav-links li {
@@ -54,7 +55,7 @@ nav {
 
 .nav-links a {
   text-decoration: none;
-  color: #1b1b1e;
+  color: #051622;
   letter-spacing: 3px;
   font-weight: bold;
   font-size: 14px;
@@ -68,7 +69,7 @@ nav {
 .burger div {
   width: 25px;
   height: 3px;
-  background-color: #1b1b1e;
+  background-color: #051622;
   margin: 5px;
   transition: all 0.3s ease;
 }
@@ -89,7 +90,7 @@ nav {
 
 footer {
   display: flex;
-  background-color: #d2e7ff;
+  background-color: #1ba098;
   height: 5vh;
   justify-content: flex-end;
   align-items: center;
@@ -98,7 +99,7 @@ footer {
 footer a {
   margin-right: 20px;
   text-decoration: none;
-  color: #1b1b1e;
+  color: #051622;
   font-weight: 600;
 }
 
@@ -110,7 +111,7 @@ footer a {
     right: 0px;
     height: 92vh;
     top: 8vh;
-    background-color: #c4c4c4;
+    background-color: #1ba098;
     display: flex;
     flex-direction: column;
     align-items: center;

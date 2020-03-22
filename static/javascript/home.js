@@ -12,19 +12,30 @@ let data = {
   }
 };
 
+// Global Variables
+let shirtRealColor = [];
+let pantsRealColor = [];
+let shoesRealColor = [];
+
 // Creates Cards
 function main() {
   for (let i = 0; i < 10; i++) {
     let div = document.createElement("div");
     div.className = "outfit";
+    div.id = `${i}`;
 
     // Creates main outfit div
     document.getElementsByClassName("main-body")[0].appendChild(div);
 
     // Generate Random Colors for all items
     let tShirtColor = random();
+    shirtRealColor[i] = tShirtColor;
+
     let pantsColor = random();
+    pantsRealColor[i] = pantsColor;
+
     let shoesColor = random();
+    shoesRealColor[i] = shoesColor;
 
     outfit(i, tShirtColor, pantsColor, shoesColor);
     saveBtn(i);

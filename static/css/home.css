@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  background-color: #fff6e9;
+  background-color: #051622;
   width: 350px;
   height: 500px;
   border-radius: 10px;
@@ -16,14 +16,14 @@
   height: 75%;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
-  background-color: rgba(196, 196, 196, 0.8);
+  background-color: rgba(6, 30, 50, 1);
   justify-content: center;
   align-items: center;
 }
 
 #img-save {
   display: flex;
-  background-color: #d2e7ff;
+  background-color: #1ba098;
   height: 5%;
   font-weight: 550;
   align-items: center;
@@ -32,13 +32,13 @@
 
 #img-save a {
   text-decoration: none;
-  color: black;
+  color: #051622;
 }
 
 #img-desc {
   height: 20%;
-  background-color: rgba(196, 196, 196, 0.8);
-  color: #1b1b1b;
+  background-color: rgba(6, 30, 50, 1);
+  color: #deb992;
 }
 #img-desc h4,
 p {

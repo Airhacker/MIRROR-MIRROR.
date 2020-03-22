@@ -5,6 +5,18 @@ let renderer;
 let scene;
 let character;
 
+let shirtRealColor = 0xffffff;
+let pantsRealColor = 0xffffff;
+let shoesRealColor = 0xffffff;
+
+//Color Changer
+let me = document.getElementById("color");
+me.addEventListener("mousedown", colorChanger);
+
+function colorChanger() {
+  console.log("it should work");
+}
+
 function init() {
   container = document.querySelector(".character-viewer");
 
@@ -73,7 +85,7 @@ function init() {
     shirtChar = gltf.scene.children[0]; //Shirt properties
 
     shirtMat = new THREE.MeshStandardMaterial({
-      color: 0x6495ed,
+      color: 0xffffff,
       opacity: 1,
       wireframe: false
     });
@@ -88,7 +100,7 @@ function init() {
     pantsChar = gltf.scene.children[0]; //Character properties
 
     pantsMat = new THREE.MeshStandardMaterial({
-      color: 0x008000,
+      color: pantsRealColor,
       opacity: 1,
       wireframe: false
     });
@@ -103,7 +115,7 @@ function init() {
     shoesChar = gltf.scene.children[0]; //Character properties
 
     shoesMat = new THREE.MeshStandardMaterial({
-      color: 0xffd700,
+      color: shoesRealColor,
       opacity: 1,
       wireframe: false
     });
@@ -133,6 +145,8 @@ function init() {
 
 init();
 
+function modelLoader() {}
+
 function animate() {
   requestAnimationFrame(animate);
   // Clock
@@ -155,7 +169,7 @@ function animate() {
   renderer.render(scene, camera);
 }
 
-// Making 3D viewwer responsive
+// Making 3D viewer responsive
 function onWindowResize() {
   camera.aspect = container.clientWidth / container.clientHeight;
   camera.updateProjectionMatrix();
@@ -164,33 +178,3 @@ function onWindowResize() {
 }
 
 window.addEventListener("resize", onWindowResize);
-
-// Buttons on Profile Page
-//shirt menu
-function shirtDropdown() {
-  document.getElementById("shirt-dropdown").classList.toggle("show");
-}
-
-window.onclick = function(event) {
-  if (!event.target.matches(".shirt-btn")) {
-    var dropdowns = document.getElementsByClassName("shirt-dropdown-class");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains("show")) {
-        openDropdown.classList.remove("show");
-      }
-    }
-  }
-};
-
-/*
-<div class="dropdown">
-  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-  <div id="myDropdown" class="dropdown-content">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
-  </div>
-</div>
-*/
