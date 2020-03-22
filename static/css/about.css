@@ -1,0 +1,5 @@
+.main-body {
+  display: flex;
+  flex-direction: column;
+  line-height: 100px;
+}
