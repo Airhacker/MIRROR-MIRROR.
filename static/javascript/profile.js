@@ -5,18 +5,6 @@ let renderer;
 let scene;
 let character;
 
-let shirtRealColor = 0xffffff;
-let pantsRealColor = 0xffffff;
-let shoesRealColor = 0xffffff;
-
-//Color Changer
-let me = document.getElementById("color");
-me.addEventListener("mousedown", colorChanger);
-
-function colorChanger() {
-  console.log("it should work");
-}
-
 function init() {
   container = document.querySelector(".character-viewer");
 
@@ -79,28 +67,37 @@ function init() {
   renderer.outputEncoding = THREE.sRGBEncoding;
   renderer.shadowMap.enabled = true;
 
+  characterModelloader();
+  animate();
+}
+
+init();
+
+function shirtModelLoader(shirtColor) {
   // t-SHirt Model Loader
   let shirtLoader = new THREE.GLTFLoader();
   shirtLoader.load("./static/3d/shirt.gltf", function(gltf) {
     shirtChar = gltf.scene.children[0]; //Shirt properties
 
     shirtMat = new THREE.MeshStandardMaterial({
-      color: 0xffffff,
+      color: shirtColor,
       opacity: 1,
       wireframe: false
     });
 
     shirtChar.material = shirtMat;
-
+    scene.remove(shirtChar); // Removes Previous Shirt before putting new one on
     scene.add(shirtChar);
   });
+}
+function pantsModelLoader(pantsColor) {
   // Pants Model Loader
   let pantsLoader = new THREE.GLTFLoader();
   pantsLoader.load("./static/3d/pants.gltf", function(gltf) {
     pantsChar = gltf.scene.children[0]; //Character properties
 
     pantsMat = new THREE.MeshStandardMaterial({
-      color: pantsRealColor,
+      color: pantsColor,
       opacity: 1,
       wireframe: false
     });
@@ -109,13 +106,16 @@ function init() {
 
     scene.add(pantsChar);
   });
+}
+
+function shoesModelLoader(shoesColor) {
   // Model Loader
   let shoesLoader = new THREE.GLTFLoader();
   shoesLoader.load("./static/3d/shoes.gltf", function(gltf) {
     shoesChar = gltf.scene.children[0]; //Character properties
 
     shoesMat = new THREE.MeshStandardMaterial({
-      color: shoesRealColor,
+      color: shoesColor,
       opacity: 1,
       wireframe: false
     });
@@ -124,6 +124,10 @@ function init() {
 
     scene.add(shoesChar);
   });
+}
+
+// Loads the main character
+function characterModelloader() {
   // Model Loader
   let characterLoader = new THREE.GLTFLoader();
   characterLoader.load("./static/3d/character.gltf", function(gltf) {
@@ -138,14 +142,8 @@ function init() {
     character.material = skinMat;
 
     scene.add(character);
-
-    animate();
   });
 }
-
-init();
-
-function modelLoader() {}
 
 function animate() {
   requestAnimationFrame(animate);
