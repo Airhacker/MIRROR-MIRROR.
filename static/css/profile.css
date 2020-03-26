@@ -29,7 +29,7 @@ canvas {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #deb992;
+  color: #181818;
 }
 
 #go-back-btn a:hover {
@@ -62,8 +62,8 @@ canvas {
 .shoes-dropdown button {
   width: 100%;
   position: relative;
-  background-color: #deb992;
-  border: none;
+  background-color: whitesmoke;
+  border: 2px solid #181818;
   height: 100%;
   font-weight: bolder;
 }
@@ -85,7 +85,8 @@ canvas {
   bottom: 35px;
   width: 100%;
   height: 100px;
-  background-color: #1ba098;
+  background-color: whitesmoke;
+  border: 2px solid #181818;
   border-radius: 5px;
   cursor: pointer;
   bottom: 45px;

@@ -79,7 +79,7 @@ function saveBtn(num) {
   // Creates text for try on button
   let saveText = document.createElement("a");
   saveText.href = "./profile.html";
-  saveText.innerText = "Try On";
+  saveText.innerText = "Make your own";
 
   // Creates svg for try on button
   let saveImg = document.createElement("img");
